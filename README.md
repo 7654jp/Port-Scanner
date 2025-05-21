@@ -8,23 +8,23 @@
 
    ## Features
 
-   - Scans a range of ports.
+   - Scans ports from 0 to 65535.
 
-   - Multithreaded for faster scanning.
+   - Multithreaded (32 threads) for faster scanning.
 
-   - Provides output for both open and closed ports.
+   - Provides output for open ports (to decrease sender's GPU load).
 
    ## Requirements
 
    - Python 3.x
 
-   - Libraries: `socket`, `threading`, `datetime`, `argparse`
+   - Libraries: `socket`, `threading`, `datetime`
 
    ## Installation
 
    1. Clone the repository:
 
-   git clone https://github.com/MadlyAbi/Port-Scanner.git
+   git clone https://github.com/7654jp/Port-Scanner.git
 
    2. Navigate to the project directory:
 
@@ -32,17 +32,13 @@
    
    ## Usage
 
-   Run the script with the target IP/hostname and port range:
+   Run the script:
 
-   python port_scanner.py example.com 1 1024
+   python port_scanner.py
 
-   For verbose output (showing closed ports as well):
+   Then, enter target IP/Hostname:
 
-   python port_scanner.py example.com 1 1024 --verbose
-
-   ## Example
-
-   python port_scanner.py 191.162.1.1 1 1024
+   Target IP/Hostname:127.0.0.1
 
    ## Contributing
 
