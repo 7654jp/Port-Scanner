@@ -4,12 +4,6 @@ import threading
 
 from datetime import datetime
 
-def chk_uint(st):
-	try:
-		return int(st)
-	except ValueError:
-		return -1
-
 # Scan 2^11 ports
 def scan_port(tgt, prt):
 	for p in range(prt, prt+2048):
