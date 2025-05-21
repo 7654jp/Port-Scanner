@@ -14,7 +14,7 @@ def chk_uint(st):
 def scan_port(tgt, prt):
 	for p in range(prt, prt+2048):
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		socket.setdefaulttimeout(0.001)
+		socket.setdefaulttimeout(0.05)
 		result = s.connect_ex((tgt, p))
 		if (result == 0):
 			print(f"Port {p}: Open")
