@@ -13,7 +13,6 @@ def scan_port(tgt, prt):
 		if (result == 0):
 			print(f"Port {p}: Open")
 			s.close()
-			portlist.append(p)
 		else:
 			#print(f"Port {p}: Closed")
 			s.close()
@@ -22,8 +21,6 @@ def scan_port(tgt, prt):
 # Main
 
 if __name__ == "__main__":
-	global portlist
-	portlist = []
 	print("Python port scanner\nMade by: @MadlyAbi, edited by: @7654jp")
 	target = input("Target IP/Hostname:")
 
